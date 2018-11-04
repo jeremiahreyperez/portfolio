@@ -1,0 +1,16 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Stalemate');
+
+* {
+  margin: 0;
+  padding: 0;
+  --darkColor: #333;
+  --lightColor: #ededed;
+  --mainColor: #;
+}
+
+body {
+  background-color: #ededed;
+  color: #333;
+  font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+}

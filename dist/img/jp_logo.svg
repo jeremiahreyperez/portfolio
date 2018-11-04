@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="520.20001"
+   height="520.19995"
+   viewBox="0 0 137.63625 137.63624"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="jp_logo.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="D:\webdev_projects\Logo\jp_logo.png"
+   inkscape:export-xdpi="97.513603"
+   inkscape:export-ydpi="97.513603">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="311.24662"
+     inkscape:cy="236.23908"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     showborder="false"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     units="px"
+     fit-margin-top="0.1"
+     fit-margin-left="0.1"
+     fit-margin-right="0.1"
+     fit-margin-bottom="0.1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(-53.067972,-104.62141)">
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.45506954;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 121.8861,104.64787 a 68.791663,68.791663 0 0 0 -7.67292,0.46561 v 0.047 15.43937 105.66487 A 53.44583,53.44583 0 0 1 69.04436,181.11244 h 6.0539 V 165.7666 H 69.06813 53.61378 a 68.791663,68.791663 0 0 0 -0.39946,3.65094 68.791663,68.791663 0 0 0 -0.11989,4.02198 68.791663,68.791663 0 0 0 0.35192,6.86728 68.791663,68.791663 0 0 0 0.12299,0.80564 68.791663,68.791663 0 0 0 60.64384,60.60612 68.791663,68.791663 0 0 0 7.67292,0.51263 68.791663,68.791663 0 0 0 7.67292,-0.46561 v -0.047 -121.10424 a 53.44583,53.44583 0 0 1 45.16881,45.15228 h -6.05389 v 15.34584 h 6.03012 15.45435 a 68.791663,68.791663 0 0 0 0.51936,-7.67292 68.791663,68.791663 0 0 0 -0.47491,-7.67292 68.791663,68.791663 0 0 0 -60.64384,-60.60612 68.791663,68.791663 0 0 0 -7.67292,-0.51263 z"
+       id="path1161"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
