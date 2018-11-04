@@ -1,16 +1,22 @@
 /* importing google fonts */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Stalemate');
 
+/* Remove default margin and padding and declare root variables */
 * {
   margin: 0;
   padding: 0;
   --darkColor: #333;
   --lightColor: #ededed;
-  --mainColor: #;
+  --orange: #f39c12;
+  --midnightBlue: #2c3e50;
+  --basePX: 8px;
 }
 
+/* initial body styles */
 body {
   background-color: #ededed;
   color: #333;
   font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Homepage styles */
