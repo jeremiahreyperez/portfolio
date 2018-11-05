@@ -9,14 +9,170 @@
   --lightColor: #ededed;
   --orange: #f39c12;
   --midnightBlue: #2c3e50;
-  --basePX: 8px;
 }
 
 /* initial body styles */
 body {
-  background-color: #ededed;
-  color: #333;
+  background-color: var(--darkColor);
+  color: var(--lightColor);
   font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
 }
 
-/* Homepage styles */
+/* logo top left corner */
+.topBar .logoImage {
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 24px;
+  height: 50px;
+}
+
+/* background */
+.topBar::before {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/computer.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  opacity: 0.3;
+  position: absolute;
+  z-index: -10;
+  filter: blur(2px);
+}
+
+/* Nav bar styling */
+nav#navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+/* Menu item styling */
+a.navItem {
+  font-size: 20px;
+  padding: 12px 16px;
+  margin: 0 4px;
+  cursor: pointer;
+  font-weight: 550;
+  text-align: center;
+  width: auto;
+  color: var(--lightColor);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s linear;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* Active menu item will be orange */
+a.navItem.active {
+  color: var(--orange);
+}
+
+/* bottom border on hover */
+a.navItem:not(.active):hover {
+  border-bottom: 2px solid var(--lightColor);
+}
+
+/* center home content */
+section#home {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* hero styling */
+.hero {
+  text-align: center;
+}
+
+.hero h2.name {
+  font-size: 24px;
+  margin: 20px;
+}
+
+.hero h2.title {
+  font-size: 24px;
+  color: var(--orange);
+  margin: 20px;
+}
+
+/* link button styling */
+.businessLinks {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  margin-left: -150px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.businessLinks .btn {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: var(--lightColor);
+  margin: 10px 20px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px var(--darkColor);
+  color: var(--midnightBlue);
+  overflow: hidden;
+  position: relative;
+}
+
+.businessLinks .btn i {
+  line-height: 60px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+
+.businessLinks .btn:hover i {
+  transform: scale(1.3);
+  color: var(--lightColor);
+}
+
+.businessLinks .btn::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: var(--orange);
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.businessLinks .btn:hover::before {
+  animation: slideIn 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/* animation */
+@keyframes slideIn {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
+  }
+}
