@@ -153,6 +153,10 @@ a.navItem:not(.active):hover {
     background-color: var(--darkColor);
     transform: translateX(0%);
     z-index: 10;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 }
