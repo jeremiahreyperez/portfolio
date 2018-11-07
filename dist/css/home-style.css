@@ -10,7 +10,7 @@ section#home {
   justify-content: center;
 }
 
-/* home background image */
+/* Home background image */
 #home::before {
   content: '';
   height: 100vh;
@@ -26,25 +26,25 @@ section#home {
   filter: blur(5px);
 }
 
-/* hero styling */
+/* Hero styling */
 .hero h2 {
   text-align: center;
   font-size: 32px;
   margin: 20px;
 }
 
-/* link button styling */
-.businessLinks {
+/* Link button styling */
+.contactInfo {
   position: absolute;
   bottom: 0%;
   left: 50%;
-  margin-left: -150px;
   margin-bottom: 20px;
   text-align: center;
-  width: 300px;
+  width: auto;
+  transform: translateX(-50%);
 }
 
-.businessLinks .btn {
+.contactInfo .btn {
   display: inline-block;
   width: 60px;
   height: 60px;
@@ -57,18 +57,18 @@ section#home {
   position: relative;
 }
 
-.businessLinks .btn i {
+.contactInfo .btn i {
   line-height: 60px;
   font-size: 20px;
   transition: 0.2s linear;
 }
 
-.businessLinks .btn:hover i {
+.contactInfo .btn:hover i {
   transform: scale(1.3);
   color: var(--lightColor);
 }
 
-.businessLinks .btn::before {
+.contactInfo .btn::before {
   content: '';
   position: absolute;
   width: 120%;
@@ -79,14 +79,19 @@ section#home {
   top: 90%;
 }
 
-.businessLinks .btn:hover::before {
-  animation: slideIn 0.7s 1;
+.contactInfo .btn:hover::before {
+  animation: btnSlideIn 0.7s 1;
   top: -10%;
   left: -10%;
 }
 
-/* animation */
-@keyframes slideIn {
+/* Hide mobile only contact info */
+.contactInfo a.mobileOnly {
+  display: none;
+}
+
+/* Animation */
+@keyframes btnSlideIn {
   0% {
     left: -110%;
     top: 90%;
@@ -101,7 +106,82 @@ section#home {
   }
 }
 
-/* media queries for responsiveness */
+/* Media queries for responsiveness */
+/* Medium Screens */
+@media (max-width: 768px) {
+  /* Display mobile only contact info */
+  .contactInfo a.mobileOnly {
+    display: inline-block;
+  }
+
+  .contactInfo {
+    width: 100%;
+  }
+
+  .contactInfo .btn {
+    height: 40px;
+    width: 40px;
+    margin: 10px 20px;
+  }
+
+  .contactInfo .btn i {
+    line-height: 40px;
+    font-size: 16px;
+  }
+
+  .contactInfo .btn:hover i {
+    transform: scale(1);
+    color: var(--midnightBlue);
+  }
+
+  .contactInfo .btn::before {
+    background: var(--lightColor);
+  }
+
+  .contactInfo .btn:hover::before {
+    animation: none;
+    top: -10%;
+    left: -10%;
+  }
+}
+
+@media (max-height: 550px) {
+  /* Display mobile only contact info */
+  .contactInfo a.mobileOnly {
+    display: inline-block;
+  }
+
+  .contactInfo {
+    width: 100%;
+  }
+
+  .contactInfo .btn {
+    height: 40px;
+    width: 40px;
+    margin: 10px 20px;
+  }
+
+  .contactInfo .btn i {
+    line-height: 40px;
+    font-size: 16px;
+  }
+
+  .contactInfo .btn:hover i {
+    transform: scale(1);
+    color: var(--midnightBlue);
+  }
+
+  .contactInfo .btn::before {
+    background: var(--lightColor);
+  }
+
+  .contactInfo .btn:hover::before {
+    animation: none;
+    top: -10%;
+    left: -10%;
+  }
+}
+
 /* Small screens */
 @media (max-width: 550px) {
   .hero {
@@ -120,16 +200,5 @@ section#home {
     height: 100px;
     transform: translate(-50%, -50%);
     z-index: 3;
-  }
-
-  .businessLinks .btn {
-    height: 40px;
-    width: 40px;
-    margin: 10px 20px;
-  }
-
-  .businessLinks .btn i {
-    line-height: 40px;
-    font-size: 16px;
   }
 }
