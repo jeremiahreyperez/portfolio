@@ -44,6 +44,10 @@ section#home {
   transform: translateX(-50%);
 }
 
+.contactInfo h4 {
+  padding-bottom: 10px;
+}
+
 .contactInfo .btn {
   display: inline-block;
   width: 60px;
@@ -114,6 +118,7 @@ section#home {
     display: inline-block;
   }
 
+  /* Adjust contact info sizing and remove hover effects */
   .contactInfo {
     width: 100%;
   }
@@ -145,14 +150,20 @@ section#home {
   }
 }
 
+/* Media query for landscape mobile */
 @media (max-height: 550px) {
   /* Display mobile only contact info */
   .contactInfo a.mobileOnly {
     display: inline-block;
   }
 
+  /* Adjust contact info sizing and remove hover effects */
   .contactInfo {
     width: 100%;
+  }
+
+  .contactInfo h4 {
+    display: none;
   }
 
   .contactInfo .btn {
@@ -184,6 +195,7 @@ section#home {
 
 /* Small screens */
 @media (max-width: 550px) {
+  /* Hero sizing and padding */
   .hero {
     margin-top: 15%;
   }
@@ -192,6 +204,7 @@ section#home {
     margin: 10px;
   }
 
+  /* Center logo on mobile screens */
   .topBar .logoImage {
     top: 35%;
     left: 50%;

@@ -5,7 +5,7 @@ body {
 
 /* Pad content */
 section#about {
-  padding: 100px 150px;
+  padding: 75px 150px 0px 150px;
 }
 
 /* home background image */
@@ -24,6 +24,21 @@ section#about {
   left: 0;
   z-index: -1;
   filter: blur(2px);
+}
+
+/* Text styling */
+h2.pageHeader {
+  padding: 10px;
+}
+
+.aboutText {
+  padding: 20px;
+}
+
+/* Toolkit styling */
+#about h3 {
+  text-align: center;
+  padding: 20px;
 }
 
 .toolKit {
