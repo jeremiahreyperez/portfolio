@@ -1,4 +1,4 @@
-/* importing google fonts */
+/* Importing google fonts */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Stalemate');
 
 /* Remove default margin and padding and declare root variables */
@@ -6,30 +6,42 @@
   margin: 0;
   padding: 0;
   --darkColor: #333;
-  --lightColor: #ededed;
+  --lightColor: #dedede;
   --orange: #f39c12;
   --midnightBlue: #2c3e50;
 }
 
-/* initial body styles */
+/* Initial body styles */
 body {
   background-color: var(--midnightBlue);
   background-image: url(../img/stardust.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   color: var(--lightColor);
   font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 2px;
+  width: 100%;
 }
 
-/* logo top left corner */
+/* Header top bar sizing */
+.topBar {
+  height: 60px;
+  width: 100%;
+}
+
+/* Logo top left corner */
 .topBar .logoImage {
   position: absolute;
   margin-top: 6px;
   margin-left: 24px;
   height: 50px;
   z-index: 3;
+}
+
+/* Orange text */
+.orange {
+  color: var(--orange);
 }
 
 /* Nav bar styling */
@@ -68,34 +80,69 @@ a.navItem {
 /* Active menu item will be orange */
 a.navItem.active {
   color: var(--orange);
+  font-weight: 600;
 }
 
-/* bottom border on hover */
+/* Bottom border on hover */
 a.navItem:not(.active):hover {
   border-bottom: 2px solid var(--lightColor);
 }
 
-/* media queries for responsiveness */
-/* medium screens*/
+/* Animations for responsive menu */
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Media queries for responsiveness */
+/* Medium screens and smaller*/
 @media (max-width: 768px) {
-  nav#navBar {
-    display: block;
-    -webkit-user-select: none;
-    user-select: none;
+  /* Push logo up */
+  .topBar .logoImage {
+    margin-top: -6px;
   }
 
+  /* Hidden horizontal nav bar */
   .navList {
-    display: none;
-    transform: translateX(-100%);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(51, 51, 51, 0.8);
+    top: 0;
+    right: 0;
+    padding-top: 30px;
+    border-radius: 8px;
+    z-index: 10;
+    width: 124px;
+    box-sizing: border-box;
+    transform: translateY(-100%);
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: slideOut;
   }
 
+  /* Menu icon for medium and smaller screens */
   .menuIcon {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
     margin-top: 12px;
-    margin-right: 12px;
+    padding-right: 44px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .menuIcon span {
@@ -106,7 +153,7 @@ a.navItem:not(.active):hover {
     position: relative;
     background: var(--lightColor);
     border-radius: 2px;
-    z-index: 10;
+    z-index: 15;
     transform-origin: 0px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
       background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -120,6 +167,7 @@ a.navItem:not(.active):hover {
     transform-origin: 0% 100%;
   }
 
+  /* Input box over menu icon */
   input#menuToggle {
     display: flex;
     flex-direction: column;
@@ -129,15 +177,16 @@ a.navItem:not(.active):hover {
     top: 0;
     right: 0;
     margin-top: 6px;
-    margin-right: 8px;
+    margin-right: 40px;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0;
     z-index: 20;
   }
 
+  /* Transitions when input is toggled */
   input#menuToggle:checked ~ .menuIcon > span {
     opacity: 1;
-    transform: rotate(-45deg) translate(-1px, 2px);
+    transform: rotate(-45deg) translate(-3px, 3px);
     background: var(--orange);
   }
 
@@ -151,37 +200,35 @@ a.navItem:not(.active):hover {
   }
 
   input#menuToggle:checked ~ .navList {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--darkColor);
-    transform: translateX(0%);
     z-index: 10;
     position: absolute;
     right: 0%;
-    width: auto;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  }
-
-  .topBar .logoImage {
-    margin-top: -6px;
+    transform: translateX(0);
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: slideInTop;
   }
 }
 
 /* Small screens and large phones*/
 @media (max-width: 550px) {
+  /* Span nav bar across small screen width */
+  .navList {
+    width: 100%;
+  }
+
+  /* Center menu icon */
   .menuIcon {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 12px;
-    margin-right: 0;
+    padding-right: 0;
   }
 
+  /* Center input */
   input#menuToggle {
     right: 50%;
     margin-right: -20px;
-  }
-  input#menuToggle:checked ~ .navList {
-    width: 100%;
   }
 }
