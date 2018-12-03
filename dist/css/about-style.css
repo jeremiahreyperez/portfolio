@@ -1,49 +1,27 @@
-/* Remove default background pattern */
-body {
-  background-image: none;
-}
-
-/* Pad content */
+/* About section styling */
 section#about {
-  padding: 75px 150px 0px 150px;
-}
-
-/* home background image */
-#about::before {
-  content: '';
-  height: 100%;
-  width: 100%;
-  background-image: url(../img/ocean.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  opacity: 0.3;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  filter: blur(2px);
+  padding: 75px 75px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 /* Text styling */
-h2.pageHeader {
-  padding: 10px;
+h2 {
+  padding: 20px;
 }
 
-.aboutText {
-  padding: 20px;
+#about .text {
+  padding: 10px;
+  width: 60%;
+  align-self: center;
 }
 
 /* Toolkit styling */
-#about h3 {
-  text-align: center;
-  padding: 20px;
-}
-
 .toolKit {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -57,7 +35,7 @@ h2.pageHeader {
   padding: 12px;
   border-radius: 20px;
   height: auto;
-  width: 300px;
+  width: 200px;
   box-shadow: 0 8px 12px 0 var(--darkColor);
 }
 
@@ -68,11 +46,13 @@ h4.skillHeader {
   padding-bottom: 16px;
 }
 
+/* Grid layout for skill icons */
 .skillList {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+  padding: 8px;
+  justify-items: center;
 }
 
 .skillIcon {
@@ -84,22 +64,14 @@ h4.skillHeader {
   margin-bottom: 10px;
 }
 
+/* Adding red to grayscale NPM icon */
 .fa-npm {
   color: #cc3534;
 }
 
+/* Media query for medium and smaller screens */
 @media (max-width: 768px) {
-  section#about {
-    padding: 50px 50px 50px 50px;
-  }
-
-  .toolKit {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  /* .skillBlock {
+  #about .text {
     width: 100%;
-  } */
+  }
 }
