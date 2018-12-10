@@ -1,12 +1,156 @@
 /* Projects styling */
 #projects {
-  padding: 75px;
+  padding: 75px 75px 0px 75px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-h1,
 h2 {
+  margin-bottom: 20px;
   padding: 20px;
+}
+
+/* Style project items */
+.projectList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-auto-rows: 300px;
+  grid-gap: 2.5rem;
+  justify-content: center;
+  align-content: center;
+  color: var(--darkColor);
+}
+
+/* Project item initial styling */
+.projectCard {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightColor);
+  border-radius: 8px;
+  box-shadow: 0 8px 12px 0 var(--darkColor);
+}
+
+.projectCard h3 {
+  padding: 16px;
+}
+
+/* Project image styling */
+.projectDemo {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Set backgrounds specific to project */
+.projectOne .projectDemo {
+  background-image: url(../img/jeremiahperezportfolio.PNG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.projectTwo .projectDemo {
+  background-image: url(../img/woodsignspirationlanding.PNG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Dark filter over image on project card hover */
+.projectDemo::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: var(--darkColor);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.projectCard:hover > .projectDemo::after {
+  opacity: 0.8;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Link button styling */
+.btn {
+  padding: 12px 0px;
+  margin: 10% auto;
+  z-index: 5;
+  background-color: var(--orange);
+  width: 60%;
+  text-decoration: none;
+  color: var(--lightColor);
+  border-radius: 24px;
+  opacity: 0;
+  transform: scale(0);
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  background-color: var(--lightColor);
+  color: var(--orange);
+  transition: all 0.25s ease-in-out;
+}
+
+/* Button visible on project card hover */
+.projectCard:hover > .projectDemo .btn {
+  transition: all 0.25s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Media query for medium and smaller screens */
+@media (max-width: 768px) {
+  /* Decrease content padding */
+  #projects {
+    padding: 25px;
+  }
+
+  /* Single column for mobile screens */
+  .projectList {
+    grid-template-columns: repeat(1, 250px);
+    grid-auto-rows: 250px;
+  }
+
+  .projectCard h3 {
+    font-size: 16px;
+  }
+}
+
+/* Media query for tablets and small laptops */
+@media (max-width: 1400px) {
+  /* Removing hover effect to view links on tablet size */
+  .projectDemo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .btn {
+    opacity: 1;
+    transform: scale(1);
+    font-size: 12px;
+    margin: 8px;
+    min-height: 10px;
+    min-width: 30%;
+    padding: 8px 4px;
+    /* border-radius: 0; */
+    /* border: 1px solid var(--lightColor); */
+  }
+
+  .projectDemo::after {
+    display: none;
+  }
 }

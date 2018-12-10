@@ -1,13 +1,12 @@
 /* About styling */
 #about {
-  padding: 75px;
+  padding: 75px 75px 0px 75px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
 /* Text styling */
-h1,
 h2 {
   padding: 20px;
 }

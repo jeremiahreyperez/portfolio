@@ -21,6 +21,11 @@ body {
   font-weight: 600;
 }
 
+/* Orange text */
+.orange {
+  color: var(--orange);
+}
+
 /* Background image */
 header::before {
   content: '';
@@ -63,11 +68,6 @@ header::before {
 .topBar .logoImage:hover {
   transition: 0.25s ease-in-out;
   transform: scale(1.1);
-}
-
-/* Orange text */
-.orange {
-  color: var(--orange);
 }
 
 /* Nav bar styling */
@@ -148,7 +148,7 @@ a.navItem:not(.active):hover {
     position: fixed;
     display: flex;
     flex-direction: column;
-    background-color: rgba(51, 51, 51, 0.8);
+    background-color: var(--darkColor);
     top: 0;
     right: 0;
     padding-top: 45px;
@@ -218,7 +218,7 @@ a.navItem:not(.active):hover {
     margin-top: 6px;
     margin-right: 55px;
     cursor: pointer;
-    opacity: 0.1;
+    opacity: 0;
     z-index: 20;
   }
 
@@ -251,24 +251,24 @@ a.navItem:not(.active):hover {
 /* Small screens */
 @media (max-width: 550px) {
   /* Span nav bar across small screen width */
-  /* .navList {
+  .navList {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
-  } */
+  }
 
   /* Center menu icon */
-  /* .menuIcon {
+  .menuIcon {
     top: 0;
     right: 50%;
     margin-top: 20px;
     margin-right: 0px;
     width: auto;
-  } */
+  }
 
   /* Center input */
-  /* input#menuToggle {
+  input#menuToggle {
     right: 50%;
     margin-right: -20px;
-  } */
+  }
 }
