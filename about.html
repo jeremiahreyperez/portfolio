@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/jp_logo_cursive_light.png"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/about-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+    />
+    <title>Welcome to Jeremiah Perez's Website</title>
+  </head>
+
+  <body>
+    <!-- Top bar header markup -->
+    <header class="topBar">
+      <a href="index.html">
+        <img src="img/jp_logo_cursive.svg" alt="jrp logo" class="logoImage" />
+      </a>
+
+      <!-- Nav bar -->
+      <nav id="navBar">
+        <input id="menuToggle" type="checkbox" />
+        <div class="menuIcon">
+          <span class="firstLine"></span> <span class="secondLine"></span>
+          <span class="thirdLine"></span>
+        </div>
+        <div class="navList">
+          <a class="navItem" href="index.html">Home</a>
+          <a class="navItem active" href="about.html">About</a>
+          <a class="navItem" href="projects.html">My Work</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- About section -->
+    <main id="about">
+      <h2 class="pageHeader">Hi, I'm <span class="orange">Jeremiah</span>!</h2>
+      <p class="text">
+        I am a self-taught developer with a strong passion for design and web
+        development.
+      </p>
+      <p class="text">
+        Check out what technologies I use and am learning below.
+      </p>
+
+      <h2>Toolkit</h2>
+      <div class="toolKit">
+        <div class="skillBlock">
+          <h4 class="skillHeader">Front End</h4>
+          <div class="skillList">
+            <i class="devicon-html5-plain colored skillIcon"></i>
+            <i class="devicon-css3-plain colored skillIcon"></i>
+            <i class="devicon-javascript-plain colored skillIcon"></i>
+            <i class="devicon-react-original colored skillIcon"></i>
+          </div>
+        </div>
+        <div class="skillBlock">
+          <h4 class="skillHeader">Design</h4>
+          <div class="skillList">
+            <img src="icons/figma-circle.svg" alt="Figma" class="skillIcon" />
+            <img
+              src="icons/invision-square.svg"
+              alt="InVision"
+              class="skillIcon"
+            />
+            <img
+              src="icons/inkscape-icon.png"
+              alt="InkScape"
+              class="skillIcon"
+            />
+            <img
+              src="icons/adobe-creative-cloud.svg"
+              alt="Adobe Creative Suite"
+              class="skillIcon"
+            />
+          </div>
+        </div>
+        <div class="skillBlock">
+          <h4 class="skillHeader">Other Tools</h4>
+          <div class="skillList">
+            <i class="devicon-github-plain colored skillIcon"></i>
+            <i class="devicon-git-plain colored skillIcon"></i>
+            <i class="fab fa-npm skillIcon"></i>
+            <i class="devicon-webpack-plain colored skillIcon"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
