@@ -1,6 +1,6 @@
 /* About styling */
 #about {
-  padding: 75px 75px 0px 75px;
+  padding: 75px 75px 24px 75px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -35,7 +35,7 @@ h2 {
   padding: 12px;
   border-radius: 20px;
   height: auto;
-  width: 200px;
+  width: 300px;
   box-shadow: 0 8px 12px 0 var(--darkColor);
 }
 
@@ -50,15 +50,19 @@ h4.skillHeader {
 .skillList {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 8px;
+  grid-gap: 24px 8px;
   padding: 8px;
-  justify-items: center;
+  justify-content: center;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
 }
 
 .skillIcon {
   width: 50px;
   z-index: 10;
-  padding: 4px;
   align-self: center;
   font-size: 50px;
   margin-bottom: 10px;
