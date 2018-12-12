@@ -50,7 +50,7 @@ h4.skillHeader {
 .skillList {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 24px 0px;
+  grid-gap: 8px 0px;
   padding: 8px 8px 0px 8px;
   justify-content: center;
 }
@@ -99,6 +99,11 @@ h4.skillHeader {
   /* Increase skill block default padding */
   .skillBlock {
     padding: 12px;
+  }
+
+  /* Increase vertical gap */
+  .skillList {
+    grid-gap: 16px 0px;
   }
 
   /* Remove skill icon and text hover effects */
