@@ -32,7 +32,7 @@ h2 {
   z-index: 5;
   align-items: center;
   margin: 12px;
-  padding: 12px;
+  padding: 12px 12px 4px 12px;
   border-radius: 20px;
   height: auto;
   width: 300px;
@@ -50,14 +50,15 @@ h4.skillHeader {
 .skillList {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 24px 8px;
-  padding: 8px;
+  grid-gap: 24px 0px;
+  padding: 8px 8px 0px 8px;
   justify-content: center;
 }
 
 .skillItem {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .skillIcon {
@@ -66,6 +67,21 @@ h4.skillHeader {
   align-self: center;
   font-size: 50px;
   margin-bottom: 10px;
+  transition: all 0.25s linear;
+}
+
+.skillText {
+  opacity: 0;
+  transition: all 0.25s linear;
+}
+
+/* Skill icon and text transitions on skill item hover */
+.skillIcon:hover {
+  transform: scale(1.1);
+}
+
+.skillIcon:hover ~ .skillText {
+  opacity: 1;
 }
 
 /* Adding red to grayscale NPM icon */
@@ -75,7 +91,22 @@ h4.skillHeader {
 
 /* Media query for medium and smaller screens */
 @media (max-width: 768px) {
+  /* Decrease page padding */
   #about {
     padding: 25px;
+  }
+
+  /* Increase skill block default padding */
+  .skillBlock {
+    padding: 12px;
+  }
+
+  /* Remove skill icon and text hover effects */
+  .skillIcon:hover {
+    transform: scale(1);
+  }
+
+  .skillText {
+    opacity: 1;
   }
 }

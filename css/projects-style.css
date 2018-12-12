@@ -123,6 +123,7 @@ h2 {
     grid-auto-rows: 250px;
   }
 
+  /* Decrease heading font size */
   .projectCard h3 {
     font-size: 16px;
   }
